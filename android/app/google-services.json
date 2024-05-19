@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "944774346625",
+    "project_id": "fogatoapp",
+    "storage_bucket": "fogatoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944774346625:android:3d358a939250e26fd11a80",
+        "android_client_info": {
+          "package_name": "com.fogatoapp.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcJMQiQXU9JfnKanblKRrOPajVWQp2ZZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

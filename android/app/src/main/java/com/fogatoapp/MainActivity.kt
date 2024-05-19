@@ -1,4 +1,4 @@
-package com.fogatoapp
+package com.fogatoapp.android
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

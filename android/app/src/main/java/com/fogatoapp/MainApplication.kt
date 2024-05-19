@@ -1,4 +1,4 @@
-package com.fogatoapp
+package com.fogatoapp.android
 
 import android.app.Application
 import com.facebook.react.PackageList
