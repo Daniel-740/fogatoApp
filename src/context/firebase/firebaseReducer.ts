@@ -1,4 +1,4 @@
-import { GET_PRODUCTS_EXIST } from "./typesReducer";
+import { GET_PRODUCTS_EXIST } from "../typesReducer";
 
 export default (state: any, action: any) => {
     switch (action.type){

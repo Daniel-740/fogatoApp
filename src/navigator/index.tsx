@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import DetailDish from '../views/dish/DetailDish';
@@ -23,9 +23,17 @@ const SCREEN_OPTIONS = {
 	headerTintColor: '#FFFFFF',
 };
 
+const CONTAINER_THEME = {
+	...DefaultTheme,
+	colors: {
+		...DefaultTheme.colors,
+		background: '#FFF',
+	},
+};
+
 export const AppNavigator = () => {
 	return (
-		<NavigationContainer>
+		<NavigationContainer theme={CONTAINER_THEME}>
 			<Stack.Navigator screenOptions={SCREEN_OPTIONS}>
 				<Stack.Screen
 					name="NewOrder"

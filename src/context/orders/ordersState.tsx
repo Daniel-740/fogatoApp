@@ -1,32 +1,47 @@
 import React, { useReducer } from 'react';
 
 import ordersReducer from './ordersReducer';
-import OrderContext from './ordersContext';
+import {OrderContexApp} from './ordersContext';
+import {
+    SELECT_PRODUCT
+} from '../typesReducer';
+import { dishType } from './orders';
 
 type propsType = {
     children: JSX.Element;
 }
 
 type stateType = {
-    dish: any;
+    order: any;
+    dish: dishType | null;
 }
 
 const OrderState = (props: propsType): JSX.Element => {
 
     //init state
     const initialState: stateType = {
-        dish: []
+        order: [],
+        dish: null,
     }
 
     // useReducer with dispatch
     const [ state, dispatch ] = useReducer(ordersReducer, initialState);
 
+    const selectDish = (dish: dishType) => {
+        dispatch({
+            type: SELECT_PRODUCT,
+            payload: dish
+        })
+    }
+
     return (
-        <OrderContext.Provider value={{
-            order: state.order
+        <OrderContexApp.Provider value={{
+            order: state.order,
+            dish: state.dish,
+            selectDish
         }}>
             {props.children}
-        </OrderContext.Provider>
+        </OrderContexApp.Provider>
     )
 }
 
