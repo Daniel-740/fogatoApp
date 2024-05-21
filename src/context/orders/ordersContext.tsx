@@ -1,5 +1,20 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
+import { dishType } from "./orders";
 
-const OrderContext = createContext({});
+type orderContextType = {
+    order: any;
+    dish: dishType | null;
+    selectDish: (_value: any) => void;
+}
 
-export default OrderContext;
+export const OrderContexApp = createContext<orderContextType | undefined>(undefined);
+
+const useOrder = () => {
+	const context = useContext(OrderContexApp);
+	if (!context) {
+		throw new Error('OrderContext must be used within an AuthProvider');
+	}
+	return context;
+}
+
+export default useOrder;
